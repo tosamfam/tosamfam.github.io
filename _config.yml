@@ -1,0 +1,93 @@
+# =========================
+# Site
+# =========================
+title: "tosamfam"
+name: "tosamfam"
+description: "실사용 기준으로 큐레이션한 상품 추천과 구매 가이드"
+url: "https://tosamfam.github.io"
+baseurl: ""
+locale: "ko-KR"
+timezone: "Asia/Seoul"
+
+# =========================
+# Theme (Minimal Mistakes)
+# =========================
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"   # 필요 시 "air", "contrast", "dark" 등으로 변경 가능
+
+# =========================
+# Plugins (GitHub Pages safe)
+# =========================
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+
+# =========================
+# SEO (OpenGraph / Twitter)
+# =========================
+logo: "/assets/images/site-logo.png"   # 없으면 주석 처리해도 됨
+twitter:
+  username: ""                         # 없으면 빈 값
+social:
+  name: "tosamfam"
+  links:
+    - "https://tosamfam.github.io"
+
+# =========================
+# Search (Optional: Lunr, works fine)
+# =========================
+search: true
+search_full_content: false
+
+# =========================
+# Permalinks
+# =========================
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: /page:num/
+
+# =========================
+# Collections (수익형 핵심: 상품 랜딩 분리)
+# =========================
+collections:
+  products:
+    output: true
+    permalink: /p/:name/
+
+defaults:
+  # Posts (유입용 정보글)
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: true
+      related: true
+
+  # Products (수익 핵심: 상품 페이지)
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: true
+      related: true
+      classes: wide
+
+# =========================
+# Build
+# =========================
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
