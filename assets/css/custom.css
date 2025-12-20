@@ -1,51 +1,78 @@
-/* Typography: readable Korean */
+/* =========================
+   Warm + clean style (20~40 여성 타겟)
+   ========================= */
+
 html, body {
   letter-spacing: -0.2px;
   line-height: 1.75;
 }
 
-/* Softer content width & spacing */
 .page__content p,
 .page__content li {
-  font-size: 1.02rem;
+  font-size: 1.03rem;
 }
 
-/* Headings: slightly softer contrast */
+.page__content h1 {
+  letter-spacing: -0.8px;
+}
+
 .page__content h2, .page__content h3 {
-  margin-top: 2.0rem;
-  letter-spacing: -0.4px;
+  margin-top: 2.1rem;
+  letter-spacing: -0.5px;
 }
 
-/* Card-like section feel */
+/* Softer separators */
 .page__content hr {
-  margin: 2.0rem 0;
-  opacity: 0.25;
-}
-
-/* Notice box: softer */
-.notice--info {
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
+  margin: 2rem 0;
+  opacity: 0.22;
 }
 
 /* Images: rounded + subtle shadow */
 .page__content img {
-  border-radius: 14px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
 }
 
-/* Tables: clean, friendly */
+/* Tables: modern card-like */
 table {
   border-collapse: separate;
   border-spacing: 0;
+  width: 100%;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
 }
 
 table th, table td {
-  padding: 0.85rem 0.9rem;
+  padding: 0.9rem 1rem;
+  border: none !important;
 }
 
 table thead th {
-  font-weight: 700;
+  font-weight: 800;
+}
+
+/* Simple "card" utility */
+.card {
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  margin: 1.1rem 0;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+/* Soft CTA button */
+.btn-soft {
+  display: inline-block;
+  padding: 0.85rem 1.05rem;
+  border-radius: 14px;
+  text-decoration: none !important;
+  font-weight: 800;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* Make links feel cleaner */
+.page__content a {
+  text-underline-offset: 3px;
 }
