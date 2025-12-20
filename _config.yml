@@ -1,19 +1,20 @@
 # =========================
 # Site
 # =========================
-title: "tosamfam"
+title: "일상 환경 기준 선택 가이드"
 name: "tosamfam"
-description: "실사용 기준으로 큐레이션한 상품 추천과 구매 가이드"
+description: "정리·관리·사용 편의를 중심으로, 생활 환경에 맞는 선택 기준을 정리합니다."
 url: "https://tosamfam.github.io"
 baseurl: ""
 locale: "ko-KR"
 timezone: "Asia/Seoul"
+encoding: "utf-8"
 
 # =========================
 # Theme (Minimal Mistakes)
 # =========================
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"   # 필요 시 "air", "contrast", "dark" 등으로 변경 가능
+minimal_mistakes_skin: "air"   # 부드러운 톤(여성 취향/여백감) - 필요 시 default로 변경 가능
 
 # =========================
 # Plugins (GitHub Pages safe)
@@ -25,31 +26,21 @@ plugins:
   - jekyll-include-cache
 
 # =========================
-# SEO (OpenGraph / Twitter)
+# SEO / Social
 # =========================
-logo: "/assets/images/site-logo.png"   # 없으면 주석 처리해도 됨
+lang: "ko"
+logo: "/assets/images/site-logo.png"   # 없으면 파일 만들기 전까지 주석 처리 가능
+author:
+  name: "tosamfam"
 twitter:
-  username: ""                         # 없으면 빈 값
+  username: ""
 social:
   name: "tosamfam"
   links:
     - "https://tosamfam.github.io"
 
 # =========================
-# Search (Optional: Lunr, works fine)
-# =========================
-search: true
-search_full_content: false
-
-# =========================
-# Permalinks
-# =========================
-permalink: /:categories/:title/
-paginate: 10
-paginate_path: /page:num/
-
-# =========================
-# Collections (수익형 핵심: 상품 랜딩 분리)
+# Collections
 # =========================
 collections:
   products:
@@ -57,7 +48,6 @@ collections:
     permalink: /p/:name/
 
 defaults:
-  # Posts (유입용 정보글)
   - scope:
       path: ""
       type: posts
@@ -69,7 +59,6 @@ defaults:
       share: true
       related: true
 
-  # Products (수익 핵심: 상품 페이지)
   - scope:
       path: ""
       type: products
@@ -81,13 +70,19 @@ defaults:
       share: true
       related: true
       classes: wide
+      sitemap: true
 
 # =========================
-# Build
+# Build / Output
 # =========================
 markdown: kramdown
 highlighter: rouge
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: /page:num/
+
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - node_modules
