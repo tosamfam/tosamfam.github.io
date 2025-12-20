@@ -1,6 +1,6 @@
-title: "일상 환경 기준 선택 가이드"
-description: "정리·관리·사용 편의를 중심으로 생활 환경에 맞는 선택 기준을 정리합니다."
-url: "https://tosamfam.github.io"
+title: "실사용 환경 기준 선택 가이드"
+description: "스펙과 광고 문구보다, 실제 사용 환경에서 도움이 되는 선택 기준을 정리합니다."
+url: "https://tosamhajin.github.io"
 baseurl: ""
 locale: "ko-KR"
 timezone: "Asia/Seoul"
@@ -15,19 +15,35 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+# (선택) 사이트 언어 힌트 강화
+lang: "ko"
+
 collections:
   products:
     output: true
     permalink: /p/:name/
 
 defaults:
+  # 1) 사이트 전체 기본값 (과도하게 single 강제하지 않기)
   - scope:
       path: ""
     values:
-      layout: single
       author_profile: false
       comments: false
       read_time: false
+
+  # 2) products 컬렉션 전용 기본값
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: single
+      classes: wide
+      author_profile: false
+      comments: false
+      read_time: false
+      # (선택) 공유/색인 안정성을 위한 힌트
+      sitemap: true
 
 exclude:
   - README.md
