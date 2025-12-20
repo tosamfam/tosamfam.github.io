@@ -1,5 +1,5 @@
 title: "일상 환경 기준 선택 가이드"
-description: "정리·관리·사용 편의를 중심으로, 생활 환경에 맞는 선택 기준을 정리합니다."
+description: "정리·관리·사용 편의를 중심으로 생활 환경에 맞는 선택 기준을 정리합니다."
 url: "https://tosamfam.github.io"
 baseurl: ""
 locale: "ko-KR"
@@ -27,6 +27,7 @@ defaults:
       layout: single
       author_profile: false
       comments: false
+      read_time: false
 
 exclude:
   - README.md
