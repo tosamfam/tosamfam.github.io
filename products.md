@@ -5,9 +5,7 @@ layout: single
 permalink: /products/
 ---
 
-{% raw %}
 {% assign items = site.products | sort: "title" %}
 {% for p in items %}
 - [{{ p.title }}]({{ p.url }})
 {% endfor %}
-{% endraw %}
