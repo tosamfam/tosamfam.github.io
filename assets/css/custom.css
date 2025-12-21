@@ -26,50 +26,83 @@ body {
   margin-bottom: 1.2em;
 }
 
-/* ===== 표(핵심 정리 표) ===== */
-.page__content table {
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #eee;
-}
-
-.page__content th {
-  background: #f1ede8;
-  font-weight: 600;
-}
-
-.page__content td {
-  background: #fff;
-}
-
 /* ===== 이미지 ===== */
 .page__content img {
   border-radius: 14px;
   margin: 1.5rem 0;
 }
 
-/* ===== 링크 버튼화 ===== */
+/* ===== 링크 ===== */
 .page__content a {
   color: #6b5f52;
   text-decoration: underline;
 }
-
 .page__content a:hover {
   color: #3e342b;
 }
 
-/* ===== 제품 목록 페이지 ===== */
-.page__content ul li {
-  margin-bottom: 0.8rem;
-  font-size: 0.95rem;
+/* ===== Table: 카드형 표로 고정(표 깨짐 방지) ===== */
+.page__content table {
+  width: 100%;
+  border-collapse: separate;   /* 중요 */
+  border-spacing: 0;           /* 중요 */
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  margin: 1.2rem 0;
+}
+
+.page__content thead th {
+  background: #f3eee8;
+  font-weight: 700;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.page__content th,
+.page__content td {
+  padding: 0.85rem 1rem;
+  border-right: 1px solid #eaeaea;  /* 세로선 */
+  border-bottom: 1px solid #efefef; /* 가로선 */
+  vertical-align: top;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+.page__content th:last-child,
+.page__content td:last-child {
+  border-right: none;
+}
+
+.page__content tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== Products list: 카드형 목록 ===== */
+.product-list {
+  margin-top: 1.2rem;
 }
 
 .product-card {
+  display: block;
   background: #fff;
+  border: 1px solid #eee;
   border-radius: 14px;
-  padding: 1rem 1.2rem;
-  margin-bottom: 1rem;
+  padding: 1rem 1.15rem;
+  margin-bottom: 0.9rem;
   box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  text-decoration: none;
 }
 
+.product-card__title {
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+  color: #2f2a24;
+}
+
+.product-card__desc {
+  font-size: 0.92rem;
+  color: #6b6258;
+  line-height: 1.55;
+}
