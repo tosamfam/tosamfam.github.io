@@ -44,38 +44,29 @@ body {
 /* ===== Table: 카드형 표로 고정(표 깨짐 방지) ===== */
 .page__content table {
   width: 100%;
-  border-collapse: separate;   /* 중요 */
-  border-spacing: 0;           /* 중요 */
-  border: 1px solid #e6e6e6;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border: 1px solid #eee;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
-  margin: 1.2rem 0;
-}
-
-.page__content thead th {
-  background: #f3eee8;
-  font-weight: 700;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .page__content th,
 .page__content td {
-  padding: 0.85rem 1rem;
-  border-right: 1px solid #eaeaea;  /* 세로선 */
-  border-bottom: 1px solid #efefef; /* 가로선 */
+  padding: 0.85rem 0.95rem;
+  border-bottom: 1px solid #eee;
   vertical-align: top;
-  line-height: 1.55;
-  word-break: keep-all;
 }
 
-.page__content th:last-child,
-.page__content td:last-child {
-  border-right: none;
+.page__content th {
+  background: #f1ede8;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.page__content tbody tr:last-child td {
-  border-bottom: none;
+.page__content tr:last-child td {
+  border-bottom: 0;
 }
 
 /* ===== Products list: 카드형 목록 ===== */
@@ -105,4 +96,29 @@ body {
   font-size: 0.92rem;
   color: #6b6258;
   line-height: 1.55;
+}
+
+/* ===== 핵심 포인트(강조 리스트) ===== */
+.key-points {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 1.25rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.key-points li {
+  background: #f7f4f0;
+  border: 1px solid #efe7de;
+  border-left: 4px solid #c8b6a6;
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2f2a24;
+}
+
+/* ===== 목록(Products) 카드 썸네일 다듬기 ===== */
+.archive__item-teaser img {
+  border-radius: 14px;
 }
