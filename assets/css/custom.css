@@ -122,3 +122,67 @@ body {
 .archive__item-teaser img {
   border-radius: 14px;
 }
+
+/* =========================
+   핵심 포인트(강조 박스) 강화
+   - 배경색/아이콘/간격/가독성 강화
+   - Minimal Mistakes 렌더 구조 차이에도 대응
+   ========================= */
+
+/* (A) '핵심 포인트' 제목 아래 리스트를 강하게 묶어주기: 
+   h3 다음에 오는 ul을 타겟 (구조가 이 패턴일 때 가장 잘 먹음) */
+.page__content h3 + ul {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  margin: 0.75rem 0 1.35rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+}
+
+/* 리스트 아이템 간격 */
+.page__content h3 + ul li {
+  margin: 0.75rem 0;
+  line-height: 1.55;
+  font-weight: 700;
+  color: #2f2a24;
+}
+
+/* 체크 아이콘 + 정렬 */
+.page__content h3 + ul li::marker {
+  content: "✅  ";
+}
+
+/* (B) 'key-points' 클래스가 적용되는 경우(예: ul.key-points 등) 대비 */
+.page__content ul.key-points,
+.page__content .key-points ul {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  margin: 0.75rem 0 1.35rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+}
+
+.page__content ul.key-points li,
+.page__content .key-points ul li {
+  margin: 0.75rem 0;
+  line-height: 1.55;
+  font-weight: 700;
+  color: #2f2a24;
+}
+
+.page__content ul.key-points li::marker,
+.page__content .key-points ul li::marker {
+  content: "✅  ";
+}
+
+/* (C) 박스 상단에 리본/헤더 느낌을 주고 싶을 때 (선택)
+   '핵심 포인트' 제목(h3)에 스타일 추가 */
+.page__content h3 {
+  letter-spacing: -0.02em;
+}
+
+/* '핵심 포인트'라는 텍스트를 더 눈에 띄게 하고 싶으면 아래처럼:
+   단, 다른 h3에도 적용되니 싫으면 '핵심 포인트'에만 별도 클래스 사용하는 방식 추천 */
+
