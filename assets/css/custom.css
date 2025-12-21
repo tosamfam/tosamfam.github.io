@@ -64,3 +64,12 @@ body {
   margin-bottom: 0.8rem;
   font-size: 0.95rem;
 }
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
