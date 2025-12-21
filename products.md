@@ -1,11 +1,14 @@
 ---
-title: "생활용 제품 정보 모음"
-description: "생활 환경 기준으로 정리한 제품 정보입니다."
+title: "제품 정보 모음"
 layout: single
-permalink: /products/
 ---
 
 {% assign items = site.products | sort: "title" %}
+
+<div class="product-list">
 {% for p in items %}
-- [{{ p.title }}]({{ p.url }})
+  <div class="product-card">
+    <a href="{{ p.url }}">{{ p.title }}</a>
+  </div>
 {% endfor %}
+</div>
